@@ -1,4 +1,4 @@
-package main
+package bst
 
 import (
 	"fmt"
@@ -160,32 +160,4 @@ func max(v1, v2 int) int {
 	}
 
 	return v2
-}
-
-func main() {
-	root := &Node{Data: 100}
-
-	root.InsertIteratively(50)
-	root.InsertIteratively(120)
-	root.InsertIteratively(20)
-	root.InsertIteratively(30)
-	root.InsertIteratively(76)
-	root.InsertIteratively(86)
-	root.InsertIteratively(10)
-	root.InsertIteratively(5)
-
-	// check := root.Search(5)
-	// if check {
-	// 	fmt.Println("Found")
-	// }else{
-	// 	fmt.Println("Not Found")
-	// }
-
-	root.Preorder(root)
-	fmt.Println()
-	height := root.FindHeight(root)
-	fmt.Println(height)
-
-	// root.DeleteLeafNode(root, 120)
-	// root.Preorder(root)
 }
